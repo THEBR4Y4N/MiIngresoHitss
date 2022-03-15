@@ -136,9 +136,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Dbazure.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbazure.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dbazure.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbazure.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dbazure.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dbazure.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ListaVenta.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Dbazure.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -156,10 +171,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Producto.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Dbazure.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Venta.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Dbazure.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -172,6 +187,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Dbazure.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Dbazure.edmx</DependentUpon>
+      <LastGenOutput>Dbazure.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Dbazure.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Dbazure.edmx</DependentUpon>
+      <LastGenOutput>Dbazure.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -190,6 +215,13 @@
     </EntityDeploy>
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Dbazure.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Dbazure.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Dbazure.edmx.diagram">
+      <DependentUpon>Dbazure.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\MiIngresoHitssF - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\MiIngresoHitssF - Web Deploy.pubxml" />
