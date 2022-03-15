@@ -34,6 +34,22 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="MiIngresoHitssEntities-Implementación" Order="1" Enabled="True">
+          <Destination Path="Data Source=DESKTOP-54954EH%3bInitial Catalog=MiIngresoHitss%3bUser ID=sa%3bPassword=root1201%3bMultipleActiveResultSets=True%3bApplication Name=EntityFramework" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=DESKTOP-54954EH%3bInitial Catalog=MiIngresoHitss%3bIntegrated Security=True%3bMultipleActiveResultSets=True%3bApplication Name=EntityFramework" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\MiIngresoHitssEntities-Implementación_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <PublishDatabases>false</PublishDatabases>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +59,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="MiIngresoHitssEntities1-Implementación" Order="2" xmlns="">
+          <Destination Path="Data Source=tcp:bgarzontest.database.windows.net,1433%3bInitial Catalog=MiIngresoHitss%3bPersist Security Info=True%3bUser ID=root1201%3bPassword=Colombia2021++%3bMultipleActiveResultSets=False%3bConnect Timeout=30%3bEncrypt=True%3bTrustServerCertificate=False" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=bgarzontest.database.windows.net%3bInitial Catalog=MiIngresoHitss%3bUser ID=root1201%3bPassword=Colombia2021++%3bMultipleActiveResultSets=True%3bApplication Name=EntityFramework" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Release\AutoScripts\MiIngresoHitssEntities1-Implementación_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <PublishDatabases>false</PublishDatabases>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
