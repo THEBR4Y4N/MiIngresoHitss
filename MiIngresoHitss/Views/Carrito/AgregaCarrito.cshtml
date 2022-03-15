@@ -16,7 +16,7 @@
         </tr>
     </thead>
     <tbody>
-        @{ 
+        @{
             Double total = 0;
         }
         @if (Session["Carrito"] != null)
@@ -24,14 +24,14 @@
             foreach (var item in Session["Carrito"] as List<MiIngresoHitss.Models.Item>)
             {
                 total += (double)(item.Cantidad * item.Producto.Precio);
-        <tr>
-            <td>@item.Producto.Id</td>
-            <td>@item.Producto.Nombre</td>
-            <td><span>$</span> @String.Format("{0:#}", item.Producto.Precio)</td>
-            <td>@item.Cantidad</td>
-            <td><span>$</span> @String.Format("{0:#}", (item.Cantidad * item.Producto.Precio))</td>
-            <td>@Html.ActionLink("Eliminar","Delete","Carrito",new {Id=item.Producto.Id},null)</td>
-        </tr>
+                <tr>
+                    <td>@item.Producto.Id</td>
+                    <td>@item.Producto.Nombre</td>
+                    <td><span>$</span> @String.Format("{0:#}", item.Producto.Precio)</td>
+                    <td>@item.Cantidad</td>
+                    <td><span>$</span> @String.Format("{0:#}", (item.Cantidad * item.Producto.Precio))</td>
+                    <td>@Html.ActionLink("Eliminar", "Delete", "Carrito", new { Id = item.Producto.Id }, null)</td>
+                </tr>
             }
         }
     </tbody>
@@ -39,6 +39,5 @@
         <th colspan="4">total</th>
         <th><span>$</span> @String.Format("{0:#}", total)</th>
     </tfoot>
-    </table>
-
+</table>
 @Html.ActionLink("Seguir Comprando","Index","Producto",null,null) | @Html.ActionLink("Finalizar Compra", "FinalizaCompra", "Carrito",null,null)
