@@ -12,7 +12,7 @@ namespace MiIngresoHitss.Controllers
 {
     public class InventarioController : Controller
     {
-        private MiIngresoHitssEntities db = new MiIngresoHitssEntities();
+        private MiIngresoHitssEntities1 db = new MiIngresoHitssEntities1();
 
         // GET: Inventario
         public ActionResult Index()

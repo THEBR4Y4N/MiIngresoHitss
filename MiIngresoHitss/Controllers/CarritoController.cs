@@ -9,7 +9,7 @@ namespace MiIngresoHitss.Controllers
 {
     public class CarritoController : Controller
     {
-        private MiIngresoHitssEntities ce = new MiIngresoHitssEntities();
+        private MiIngresoHitssEntities1 ce = new MiIngresoHitssEntities1();
         public ActionResult AgregaCarrito(int id)
         {
             if (Session["Carrito"] == null)
