@@ -14,7 +14,7 @@ namespace MiIngresoHitss.Controllers
 
         public ActionResult Index()
         {
-            return View(ce.Venta.ToList().OrderBy(x=>x.DiaVenta));
+            return View(ce.Venta.ToList().OrderBy(x => x.DiaVenta));
         }
     }
 }

@@ -10,12 +10,13 @@ namespace MiIngresoHitss.Controllers
     public class CarritoController : Controller
     {
         private MiIngresoHitssEntities1 ce = new MiIngresoHitssEntities1();
-        public ActionResult AgregaCarrito(int id)
+        [HttpPost]
+        public JsonResult AgregaCarrito(int id, int cantidad)
         {
             if (Session["Carrito"] == null)
             {
                 List<Item> compras = new List<Item>();
-                compras.Add(new Item(ce.Producto.Find(id), 1));
+                compras.Add(new Item(ce.Producto.Find(id), cantidad));
                 Session["Carrito"] = compras;
             }
             else
@@ -24,15 +25,20 @@ namespace MiIngresoHitss.Controllers
                 int IndexE = getIndex(id);
                 if (IndexE == -1)
                 {
-                    compras.Add(new Item(ce.Producto.Find(id), 1));
+                    compras.Add(new Item(ce.Producto.Find(id), cantidad));
                 }
                 else
                 {
-                    compras[IndexE].Cantidad++;
+                    compras[IndexE].Cantidad += cantidad;
                     Session["Carrito"] = compras;
                 }
 
             }
+            return Json(new { Response = true }, JsonRequestBehavior.AllowGet);
+        }
+        [HttpGet]
+        public ActionResult AgregaCarrito()
+        {
             return View();
         }
         public ActionResult Delete(int id)

@@ -13,11 +13,11 @@ namespace MiIngresoHitss.Models
         {
             get
             {
-               return _producto;
+                return _producto;
             }
             set
             {
-               _producto = value;
+                _producto = value;
             }
         }
 
@@ -31,7 +31,7 @@ namespace MiIngresoHitss.Models
             set
             {
                 _cantidad = value;
-            }  
+            }
         }
 
         public Item()
