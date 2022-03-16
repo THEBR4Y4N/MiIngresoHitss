@@ -8,28 +8,30 @@
 <h2>Ventas</h2>
 @if (Model != null)
 {
-    <table class="table table-striped table-hover">
-        <thead class="table-dark">
-            <tr>
-                <th>ID</th>
-                <th>fecha de la compra</th>
-                <th>Subtotal</th>
-                <th>IVA</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+    <div class="table-responsive">
+        <table class="table table-striped table-hover table-curved">
+            <thead class="table-dark">
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@item.DiaVenta</td>
-                    <td><span>$</span>@item.Subtotal</td>
-                    <td><span>$</span>@item.Iva</td>
-                    <td><span>$</span>@item.Total</td>
+                    <th class="info bold-italic col-md-3" scope="row">ID</th>
+                    <th class="info bold-italic col-md-3" scope="row">fecha de la compra</th>
+                    <th class="info bold-italic col-md-3" scope="row">Subtotal</th>
+                    <th class="info bold-italic col-md-3" scope="row">IVA</th>
+                    <th class="info bold-italic col-md-3" scope="row">Total</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.DiaVenta</td>
+                        <td><span>$</span>@item.Subtotal</td>
+                        <td><span>$</span>@item.Iva</td>
+                        <td><span>$</span>@item.Total</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        </div>
+        }
 

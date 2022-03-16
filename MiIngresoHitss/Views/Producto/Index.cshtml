@@ -5,16 +5,16 @@
 @model IEnumerable<MiIngresoHitss.Models.Producto>
 <h2>Productos</h2>
 @if (Model != null)
-{
-    <table class="table table-striped table-hover">
+{   <div class="table-responsive">
+    <table class="table table-striped table-hover table-curved">
         <thead class="table-dark">
             <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Descripciòn</th>
-                <th>Cantidad</th>
-                <th>Agregar al Carrito</th>
+                <th class="info bold-italic">ID</th>
+                <th class="info bold-italic col-md-2" scope="row">Nombre</th>
+                <th class="info bold-italic col-md-2" scope="row">Precio</th>
+                <th class="info bold-italic col-md-2" scope="row">Descripciòn</th>
+                <th class="info bold-italic col-md-2" scope="row">Cantidad</th>
+                <th class="info bold-italic col-md-2" scope="row">Agregar al Carrito</th>
             </tr>
         </thead>
         <tbody>
@@ -31,10 +31,11 @@
             }
         </tbody>
     </table>
-}
-@section scripts
+    </div>
+    }
+    @section scripts
 {
-    <script>
+        <script>
     $(function () {
         $(".agregar").on("click", function (event) {
             event.preventDefault();
@@ -65,5 +66,5 @@
             }
         });
     });
-    </script>
-}
+        </script>
+    }

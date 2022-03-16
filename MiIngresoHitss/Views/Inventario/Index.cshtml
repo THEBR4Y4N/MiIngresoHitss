@@ -10,18 +10,20 @@
 <p>
     @Html.ActionLink("Agregar Producto", "Create")
 </p>
-<table class="table">
+<table class="table table-curved">
     <tr>
-        <th>
+        <th class="info bold-italic col-md-3" scope="row">
             @Html.DisplayNameFor(model => model.Nombre)
         </th>
-        <th>
+        <th class="info bold-italic col-md-3" scope="row">
             @Html.DisplayNameFor(model => model.Descripciòn)
         </th>
-        <th>
+        <th class="info bold-italic col-md-3" scope="row">
             @Html.DisplayNameFor(model => model.Precio)
         </th>
-        <th></th>
+        <th class="info bold-italic col-md-3" scope="row">
+         Acciones
+        </th>
     </tr>
 
     @foreach (var item in Model)
