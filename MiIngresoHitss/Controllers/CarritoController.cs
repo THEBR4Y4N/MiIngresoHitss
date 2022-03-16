@@ -9,7 +9,7 @@ namespace MiIngresoHitss.Controllers
 {
     public class CarritoController : Controller
     {
-        private MiIngresoHitssEntities1 ce = new MiIngresoHitssEntities1();
+        private MiIngresoHitssEntities ce = new MiIngresoHitssEntities();
         [HttpPost]
         public JsonResult AgregaCarrito(int id, int cantidad)
         {

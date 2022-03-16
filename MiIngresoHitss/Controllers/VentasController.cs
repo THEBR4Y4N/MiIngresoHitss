@@ -10,7 +10,7 @@ namespace MiIngresoHitss.Controllers
     public class VentasController : Controller
     {
         // GET: Ventas
-        private MiIngresoHitssEntities1 ce = new MiIngresoHitssEntities1();
+        private MiIngresoHitssEntities ce = new MiIngresoHitssEntities();
 
         public ActionResult Index()
         {
